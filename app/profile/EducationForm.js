@@ -361,7 +361,7 @@ export default function EducationSection() {
   const initialFormState = () => ({
     institution: "",
     university: "",
-    educationLevel: "", // ✅ only education level now
+    educationLevel: "", 
     fieldOfStudy: "",
     specialization: "",
     location: "",

@@ -2,8 +2,6 @@
 import { useState } from "react";
 import * as Yup from "yup";
 
-
-
 export default function ProjectForm() {
   const [formData, setFormData] = useState({
     title: "",
