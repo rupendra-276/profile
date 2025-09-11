@@ -32,6 +32,7 @@ import EducationSection from './EducationForm';
 import ProjectSection from './Project';
 import CertificationSection from './Certification';
 import JobPreferences from './Jobpreferences';
+import SocialLinks from './SocialLinks';
 
 export default function Profille() {
     const [user, setUser] = useState({
@@ -100,6 +101,7 @@ export default function Profille() {
          <ProfileExperience experience={user.experience} />
          <EducationSection />
          <ProjectSection />
+         <SocialLinks />
          <CertificationSection />
          <JobPreferences />
         {/* Main Content */}
