@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FormField from "./FormField";
 import FormInput from "./FormInput";
-import { X } from 'lucide-react';
-export default function FormAchievements({ label, icon, values, onChange }) {
+
+export default function FormAchievements({ label, icon, values, onChange, buttonshow=true }) {
   const [input, setInput] = useState("");
 
   const addItem = () => {
@@ -30,14 +30,16 @@ export default function FormAchievements({ label, icon, values, onChange }) {
         onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), addItem())}
       />
       </div>
-      
-      <button
+      {
+        buttonshow ? <button
         type="button"
         onClick={addItem}
         className="w-[10%] px-3 mt-0.5 border border-black text-gray-600 hover:cursor-pointer  rounded-md  whitespace-nowrap"
       >
         Add
-      </button>
+      </button> : ''
+      }
+      
     </div>
 
     {/* Items Inline (chips) */}
@@ -51,7 +53,7 @@ export default function FormAchievements({ label, icon, values, onChange }) {
           <button
             type="button"
             onClick={() => removeItem(idx)}
-            className="text-red-500 hover:text-red-700 hover:cursor-pointer font-bold"
+            className="text-gray-600 hover:text-gray-700 hover:cursor-pointer font-bold"
           >
             ✕
           </button>
@@ -60,7 +62,6 @@ export default function FormAchievements({ label, icon, values, onChange }) {
     </div>
   </div>
 </FormField>
-
 
   );
 }

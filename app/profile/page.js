@@ -25,12 +25,13 @@ import ProfileHeader from './Profileheader';
 import { useState } from 'react';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience';
-import ProfileSkills from './ProfileSkills';
-import ProfileContact from './ProfileContact';
-import ProfileCompletion from './ProfileCompletion';
-import ProfileLearning from './ProfileLearning';
+
+import ProfileLearning from './SkillsLearning';
 import ProfileActivity from './ProfileActivity';
 import EducationSection from './EducationForm';
+import ProjectSection from './Project';
+import CertificationSection from './Certification';
+import JobPreferences from './Jobpreferences';
 
 export default function Profille() {
     const [user, setUser] = useState({
@@ -98,25 +99,13 @@ export default function Profille() {
          <ProfileAbout about={user.about} />
          <ProfileExperience experience={user.experience} />
          <EducationSection />
+         <ProjectSection />
+         <CertificationSection />
+         <JobPreferences />
         {/* Main Content */}
         <hr className="border-gray-400" />
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 md:px-0"> */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* <div className="space-y-6 border-r border-gray-400 mx-2 px-2">
-            <ProfileCompletion />
-            <ProfileContact contact={user.contact} />
-            <ProfileSkills skills={user.skills} onSkillsChange={(s) => setUser((u) => ({ ...u, skills: s }))} />
-
-          </div> */}
-
-          <div className="md:col-span-2 space-y-6">
-            {/* <ProfileAbout about={user.about} /> */}
-            {/* <ProfileExperience experience={user.experience} /> */}
-            <ProfileLearning />
-          </div>
-
-          
-        </div>
+       
       </div> 
     </div>
   )
