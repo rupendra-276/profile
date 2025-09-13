@@ -29,13 +29,16 @@ export default function Home() {
       <SpreadsHeroSection />
       <DigitalHomeSection />
       {/* <SpreadsFeatures /> */}
-      <Services />
       <TestimonialsSection />
+       
       <JobDomainsSection />
       <FuelYourCareer />
+       <WhyChooseUs />
+       <Services />
+      
       
       <JobPortalHero />
-      <WhyChooseUs />
+     
       {/* ------------ */}
     </div>
   );

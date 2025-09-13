@@ -164,6 +164,7 @@ import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { RiDoubleQuotesR } from "react-icons/ri";
 
 const testimonials = [
   {
@@ -249,7 +250,8 @@ export default function ResponsiveTestimonials() {
           our Smart ATS.
         </p>
 
-        <div className="text-right mb-6 me-5 space-x-2">
+{/* hide the button */}
+        {/* <div className="text-right mb-6 me-5 space-x-2">
           <button
             onClick={handlePrev}
             className="bg-sky-700 hover:bg-sky-800 text-white p-2 disabled:opacity-30"
@@ -264,13 +266,13 @@ export default function ResponsiveTestimonials() {
           >
             <ChevronRight />
           </button>
-        </div>
+        </div> */}
 
         <div className="overflow-hidden"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}>
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform my-5 duration-500 ease-in-out"
             style={{
               width: `${(testimonials.length * 100) / visibleCount}%`,
               transform: `translateX(-${(index * 100) / testimonials.length}%)`,
@@ -284,9 +286,26 @@ export default function ResponsiveTestimonials() {
                   flex: `0 0 ${100 / testimonials.length}%`,
                 }}
               >
-                <div className="border shadow-md p-3 rounded-md text-center h-full hover:shadow-lg transition">
-                  <RiDoubleQuotesL className="text-blue-500 text-3xl" />
-                  <p className="italic px-4 my-2 font-[inter] text-gray-900">"{t.quote}"</p>
+                <div className="bg-[#00000007] shadow-md p-3 rounded-md text-center h-full hover:shadow-lg transition">
+                  {/* Profile */}
+                  <div className="p-4 flex items-center ">
+                    <Image
+                      src={t.img}
+                      alt={t.name}
+                      width={60}
+                      height={60}
+                      className="rounded-full object-cover w-[60px] h-[60px]"
+                    />
+                    <div className="text-start ms-4">
+                      <h4 className="font-semibold text-lg">{t.name}</h4>
+                      <p className="text-gray-500 text-sm">{t.title}</p>
+                    </div>
+                  </div>
+                  
+                 
+                  <p className="italic font-[inter] text-gray-900 text-left px-3"> {t.quote} </p>
+                 
+              
 
                   {/* ⭐ Rating */}
                   <p className="py-1">
@@ -298,20 +317,7 @@ export default function ResponsiveTestimonials() {
                     </span>
                   </p>
 
-                  {/* Profile */}
-                  <div className="p-4 flex items-center mb-4">
-                    <Image
-                      src={t.img}
-                      alt={t.name}
-                      width={75}
-                      height={75}
-                      className="rounded-full object-cover w-[75px] h-[75px]"
-                    />
-                    <div className="text-start ms-4">
-                      <h4 className="font-semibold text-lg mt-2">{t.name}</h4>
-                      <p className="text-gray-500 text-sm">{t.title}</p>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             ))}

@@ -64,7 +64,6 @@ export const featuresData = [
   },
 ];
 
-
 const JobPortalHero = () => {
 
   return (
@@ -74,10 +73,10 @@ const JobPortalHero = () => {
         <div className="grid lg:grid-cols-2 gap-4 items-center">
           {/* Left Side */}
            <div className="space-y-8 transform transition-all duration-1000">
-      <AnimatedWrapper
-      delay={0.3}
-        className="space-y-5"
-      >
+          <AnimatedWrapper
+          delay={0.3}
+            className="space-y-5"
+          >
         <div>
           <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
             Build a Standout Profile.{" "}
@@ -110,12 +109,12 @@ const JobPortalHero = () => {
                     <h3 className=" font-semibold mb-2">{title}</h3>
                     <p className="text-gray-600 text-[13px]">{description}</p>
                   </div>
-                  <Link
+                  {/* <Link
                     href={redirection}
                     className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline"
                   >
                     {buttonName}
-                  </Link>
+                  </Link> */}
                 </AnimatedWrapper>
               )
             )}

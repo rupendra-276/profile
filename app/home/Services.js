@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Trainings",
-    icon: <GraduationCap className="w-12 h-12 text-pink-500" />,
+    icon: <GraduationCap className="w-12 h-12 text-amber-500" />,
     description:
       "Corporate and technical training programs for workforce growth. Our training sessions improve skills, enhance productivity, and build stronger teams.",
     bgColor: "bg-pink-500",
@@ -60,33 +60,27 @@ export default function Services() {
   const [hoverIndex, setHoverIndex] = useState(null);
 
   return (
-    <div className="min-h-screen bg-[#0078cdc9] py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#eeeeee45] py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
           {/* Left Section */}
           <div className="lg:w-[35%] w-full">
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-              Build a Standout Profile.{" "}
-              <span className="text-white">
-                Get Matched Instantly. Land Your Next Role.
-              </span>
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+              AI-Powered Career Growth & Business Solutions
             </h1>
             <p className="text-lg text-gray-800 leading-relaxed font-[jost] max-w-lg mt-4">
-              Spreads connects job seekers and students to careers with
-              AI-matched jobs, verified employer signals, and smart resumes.
+              Discover smarter hiring, workforce management, and digital transformation with Spreads. Our AI-driven platform connects job seekers, businesses, and students with tailored opportunities, recruitment solutions, and professional growth programs.
             </p>
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <LinkButton name="Create Career Profile" href="signin" />
-            </div>
+            </div> */}
           </div>
 
           {/* Right Section */}
           <div className="lg:w-[63%] w-full">
-            <p className="text-lg mb-6 text-gray-800">
-              At Spreads, our AI-powered system helps you discover the perfect
-              skill combination for your next career move. Whether you're diving
-              into design, jumping into AI, or growing in product management —
-              we match real-time hiring data with your interests.
+            <p className="text-lg mb-6 font-[inter] text-gray-800">
+                At Spreads, we provide a complete suite of HR, recruitment, IT, and training services designed to match real-time hiring data with your skills and interests. From AI-powered job matching to enterprise solutions, we empower both individuals and organizations to grow.
+
             </p>
 
            
@@ -103,7 +97,7 @@ export default function Services() {
                 <motion.div
                   animate={{ rotateY: hoverIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.6 }}
-                  className="absolute inset-0 backface-hidden flex flex-col items-center justify-center bg-white text-black rounded-sm shadow-lg"
+                  className="absolute inset-0 backface-hidden flex flex-col items-center justify-center bg-[#ffffff90] text-black rounded-md shadow-sm"
                 >
                   <div className="text-4xl mb-3">{service.icon}</div>
                   <h3 className="text-lg font-semibold">{service.title}</h3>

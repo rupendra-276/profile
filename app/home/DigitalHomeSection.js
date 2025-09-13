@@ -46,13 +46,13 @@ export default function DigitalHomeSection() {
           <div className="flex justify-center lg:justify-start flex-shrink-0">
             <div className="relative">
               <video
-                className="w-80 bg-[#f9fafc] h-[600px] object-cover rounded-3xl"
+                className="md:w-96 w-80 h-[650] md:h-[750px] object-cover rounded-3xl"
                 autoPlay
                 muted
                 loop
                 playsInline
               >
-                <source src="/story1.mp4" type="video/mp4" />
+                <source src="/story.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -61,7 +61,7 @@ export default function DigitalHomeSection() {
           {/* Right Side - Content and Cards */}
           <div className="space-y-10 flex-1">
             {/* Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-black leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium font-[font-jost] text-black leading-tight">
               Find your digital home for career stories, AI-matched jobs, and
               meaningful connections.
             </h2>
@@ -80,7 +80,7 @@ export default function DigitalHomeSection() {
                   onMouseLeave={() => setHoveredCard(null)}
                   onClick={() => handleCardClick(card.route)}
                 >
-                  <div className=" bg-[#f1f2f9] rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-2xl">
+                  <div className=" bg-[#f1f2f972] rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300 max-w-2xl">
                     <div className="flex items-center gap-4 md:gap-6">
                       {/* Card Image - Left Side */}
                       <div className="flex-shrink-0">

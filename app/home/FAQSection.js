@@ -40,13 +40,14 @@ const FAQSection = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-16 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-600 mx-auto rounded-full"></div>
+          <p className="font-medium">Get detailed answers to the most common queries about AI-powered career growth, recruitment solutions, and professional services.</p>
+          {/* <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-600 mx-auto rounded-full"></div> */}
         </div>
 
         {/* FAQ Items */}
@@ -54,7 +55,7 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden"
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden"
             >
               {/* Question */}
               <button
@@ -66,7 +67,7 @@ const FAQSection = () => {
                   <span className="text-blue-600 font-bold text-lg mt-1">
                     {index + 1}.
                   </span>
-                  <h3 className="text-lg md:text-lg font-semibold text-gray-900 leading-relaxed">
+                  <h3 className="text-lg md:text-lg font-medium font-[inter] text-gray-900 ">
                     {faq.question}
                   </h3>
                 </div>
@@ -106,7 +107,7 @@ const FAQSection = () => {
             Our support team is here to help you get started with Spreads.
           </p>
           <div className="text-center">
-              <LinkButton name=" Contact Support" href="mailto:support@example.com" showIcon={false} linkclassname="bg-white !text-blue-600 hover:bg-slate-100 transition-all duration-300  hover:shadow-xl hover:!cursor-pointer transform hover:!scale-105" />
+              <LinkButton name=" Contact Support" href="mailto:support@example.com" showIcon={false} linkclassname="bg-white !text-blue-600 hover:bg-slate-100 transition-all duration-300  hover:shadow-xl hover:!cursor-pointer transform hover:!scale-105 " />
 
           </div>
         </div>

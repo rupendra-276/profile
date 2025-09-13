@@ -91,21 +91,22 @@ import React from "react";
 import { StaggeredContainer, AnimatedWrapper } from "../animation/animation";
 import LinkButton from "../button/Button";
 
+
 const whyChooseUsData = [
   {
     img: "/Community.png",
     title: "Built-in Career Community",
-    desc: "Join real discussions with students, mentors, recruiters, and alumni.",
+    desc: "Engage with students, mentors, recruiters, and alumni in a dynamic career-focused community. Share knowledge, build networks, and grow together.",
   },
   {
     img: "/monetization.png",
-    title: "Monetization Made Easy",
-    desc: "Earn through branded content, creator ads, premium content, or referrals. We reward meaningful contribution.",
+    title: "Seamless Monetization Opportunities",
+    desc: "Turn your expertise into income through branded content, creator ads, premium learning resources, and referral programs — rewarding every contribution.",
   },
   {
     img: "/built-in-ats.png",
-    title: "Built-in ATS & Hiring Engine",
-    desc: "AI-optimized job matches, auto-apply, and recruiter tools that simplify hiring.",
+    title: "AI-Powered ATS & Hiring Engine",
+    desc: "Streamline recruitment with AI-driven job matching, automated applications, and smart recruiter tools designed for faster and smarter hiring.",
   },
 ];
 
@@ -122,8 +123,7 @@ export default function WhyChooseUs() {
           India’s Career, Creator & Community Platform for the Next Generation.
           Because your voice deserves more than likes — it deserves legacy.
           Spreads is where creators, job seekers, and communities come to grow,
-          connect, and rise. From your first resume to your next big story, this
-          is where your journey begins.
+          connect, and rise. 
         </AnimatedWrapper>
         <AnimatedWrapper direction="up">
         <LinkButton href="/signup" name="Grow with Your Circle"  />
@@ -142,9 +142,9 @@ export default function WhyChooseUs() {
   />
 </div>
 
-
-      <StaggeredContainer className="mt-12 px-3.5 py-14
-       grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-20">
+<div className="max-w-6xl mx-auto">
+   <StaggeredContainer className="mt-12 px-3.5 py-14
+       grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
         {whyChooseUsData.map((item, index) => (
           <AnimatedWrapper
             delay={index * 0.4}
@@ -157,13 +157,15 @@ export default function WhyChooseUs() {
               alt={item.title}
               className="w-full h-[260px]  object-cover rounded-md mb-4"
             />
-            {/* <h3 className="font-semibold text-lg mt-3 mb-2 text-gray-800">
+            <h3 className="font-semibold mt-3 text-lg mb-2 text-gray-800">
               {item.title}
-            </h3> */}
-            <p className=" text-[#565656] font-medium text-lg">{item.desc}</p>
+            </h3>
+            <p className=" text-[#565656] font-[jost] ">{item.desc}</p>
           </AnimatedWrapper>
         ))}
       </StaggeredContainer>
+</div>
+   
     </section>
   );
 }
