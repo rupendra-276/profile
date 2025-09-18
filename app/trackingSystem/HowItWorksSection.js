@@ -23,38 +23,53 @@ const HowItWorksSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const steps = [
-    {
-      id: 1,
-      icon: <FileText className="w-7 h-7" />,
-      title: "Create Job Listings",
-      description:
-        "Design professional job postings with our intuitive editor. Add custom fields, requirements, and instantly publish across multiple platforms.",
-      color: "#2563eb",
-      bgColor: "#eff6ff",
-      features: ["Template Library", "Multi-platform Sync", "Custom Fields"],
-    },
-    {
-      id: 2,
-      icon: <Users className="w-7 h-7" />,
-      title: "Manage Applications",
-      description:
-        "Streamline candidate evaluation with automated screening, team collaboration tools, and centralized application tracking.",
-      color: "#7c3aed",
-      bgColor: "#f3f4f6",
-      features: ["Smart Filtering", "Team Reviews", "Status Tracking"],
-    },
-    {
-      id: 3,
-      icon: <Send className="w-7 h-7" />,
-      title: "Hire & Onboard",
-      description:
-        "Send professional offers, track acceptances, and seamlessly onboard new team members with automated workflows.",
-      color: "#059669",
-      bgColor: "#ecfdf5",
-      features: ["Digital Offers", "E-signatures", "Onboarding Flow"],
-    },
-  ];
+    const steps = [
+  {
+    id: 1,
+    icon: <FileText className="w-7 h-7" />,
+    title: "Create Job Listings",
+    description:
+      "Design professional job postings with our intuitive editor. Add custom fields, requirements, and instantly publish across multiple platforms.",
+    color: "#2563eb",
+    bgColor: "#eff6ff",
+    features: [
+      "Template Library",
+      "Multi-platform Sync",
+      "Custom Fields",
+      "AI-Powered Suggestions", // ✅ 4th feature
+    ],
+  },
+  {
+    id: 2,
+    icon: <Users className="w-7 h-7" />,
+    title: "Manage Applications",
+    description:
+      "Streamline candidate evaluation with automated screening, team collaboration tools, and centralized application tracking.",
+    color: "#7c3aed",
+    bgColor: "#f3f4f6",
+    features: [
+      "Smart Filtering",
+      "Team Reviews",
+      "Status Tracking",
+      "Automated Reminders", // ✅ 4th feature
+    ],
+  },
+  {
+    id: 3,
+    icon: <Send className="w-7 h-7" />,
+    title: "Hire & Onboard",
+    description:
+      "Send professional offers, track acceptances, and seamlessly onboard new team members with automated workflows.",
+    color: "#059669",
+    bgColor: "#ecfdf5",
+    features: [
+      "Digital Offers",
+      "E-signatures",
+      "Onboarding Flow",
+      "HR Integrations", // ✅ 4th feature
+    ],
+  },
+];
 
   const bonusFeatures = [
     {
@@ -75,14 +90,14 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <div className="bg-white py-16 px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className="bg-white py-20 px-6">
+      <div className="max-w-5xl py-4 mx-auto">
         <div
           className={`text-center mb-12 transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             How It Works
           </h2>
           <p className="text-base text-gray-600 max-w-xl mx-auto">
@@ -90,7 +105,7 @@ const HowItWorksSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-12 mb-10">
           {steps.map((step, index) => (
             <div
               key={step.id}
@@ -172,7 +187,7 @@ const HowItWorksSection = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          {/* <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <div className="text-center mb-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Complete Hiring Toolkit
@@ -211,7 +226,7 @@ const HowItWorksSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

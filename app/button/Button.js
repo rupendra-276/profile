@@ -1,24 +1,3 @@
-// import Link from "next/link";
-// import { MoveRight } from "lucide-react";
-
-// export default function LinkButton({
-//   href,
-//   name,
-//   icon: IconComponent = MoveRight,
-//   linkclassname = "",
-// }) {
-//   return (
-//     <Link
-//       href={href}
-//       className={`bg-blue-600 text-[15px] hover:bg-blue-700 text-white font-semibold 
-//                   py-1.5 px-4 md:py-2.5 md:px-5 rounded-full transition-colors duration-200 
-//                   inline-flex items-center cursor-pointer gap-2 ${linkclassname}`}
-//     >
-//       <span>{name}</span>
-//       <IconComponent className="w-5 h-5" />
-//     </Link>
-//   );
-// }
 
 import Link from "next/link";
 import { MoveRight } from "lucide-react";

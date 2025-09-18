@@ -3,13 +3,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --white: #ffffff;
+  --black: #000000;
+  --bg-coloer: #020718;
+  --gray-100: #efeeff;
+   --color-200: #d7e2fd;
+  --gray-500: #a7a2a2f1;
+  --gray-600: rgba(217, 211, 211, 0.588);
   --foreground: #171717;
-  --color-1: #d7e2fd;
-  --color-2: #004aad;
+ 
+  --color2: #004aad;
   --text-color-main: #601f1f;
-  --color-3: #1200B1;
-  --color-4: #843101;
+  --color3: #1200B1;
+  --color4: #843101;
 }
 
 @theme inline {
@@ -30,4 +36,20 @@ body {
   background: var(--background);
   /* color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-shadow {
+  box-shadow: 
+    0px 2px 4px rgba(237, 236, 236, 0.744), 
+    0px -2px 4px rgba(237, 236, 236, 0.744), 
+    2px 0px 4px rgba(237, 236, 236, 0.744), 
+    -2px 0px 4px rgba(237, 236, 236, 0.744);
+}
+
+.custom-scroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.custom-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }

@@ -8,6 +8,7 @@ export default function TextAreaField({
   onChange,
   placeholder,
   error,
+  rows=4,
 
 }) {
   return (
@@ -17,10 +18,10 @@ export default function TextAreaField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`w-full px-3 py-2 border rounded-lg outline-none resize-none 
+        className={`w-full px-3 py-2 mt-3 text-[#fff] border border-gray-300 rounded-xs resize-none 
           ${error ? "border-red-500" : "borderblack"} 
-          focus:outline-none`}
-        rows={4}
+          focus:border focus:border-blue-300 focus:outline`}
+        rows={rows}
       />
       {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
     </FormField>

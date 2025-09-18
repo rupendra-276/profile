@@ -16,7 +16,7 @@ export default function CheckboxField({
           name={name}
           checked={checked}
           onChange={onChange}
-          className={`w-4 h-4 accent-blue-600 border-gray-300 rounded 
+          className={`w-4 h-4 accent-blue-600 border border-gray-300 rounded-xs  focus:border focus:border-blue-300 focus:outline 
             ${error ? "border-red-500" : ""}`}
         />
         <span className="text-gray-700">{label}</span>
