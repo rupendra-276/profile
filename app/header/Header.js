@@ -88,8 +88,8 @@ const Header = () => {
     <header
       className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out px-3  sm:px-4 lg:px-6 xl:px-8 ${
         scrolled
-          ? "py-1 sm:py-1.5 bg-white backdrop-blur-lg shadow-sm border-b border-gray-200/50"
-          : " sm:py-2 bg-white border-b-2 border-gray-200"
+          ? "py-1 sm:py-1.5 bg-[#020718] backdrop-blur-lg shadow-sm border-b border-gray-200/50"
+          : " sm:py-2 bg-[#020718] border-b-2 border-gray-200"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -120,8 +120,8 @@ const Header = () => {
               <span
                 className={`relative cursor-pointer font-[Jost] font-medium text-sm lg:text-base transition-all duration-300 whitespace-nowrap ${
                   pathname === href
-                    ? "text-[#1200B1] font-semibold"
-                    : "text-gray-700 hover:text-[#1200B1]"
+                    ? "text-[#edebff] font-semibold"
+                    : "text-white hover:text-[#e1d7d7]"
                 }`}
               >
                 {label}

@@ -196,11 +196,11 @@ import ProjectSection from './Project';
 import ProfileAbout from './ProfileAbout';
 
 const DesignerProfile = () => {
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("overview");
 
   // Tabs
   const tabs = [
-    // { id: "overview", label: "Overview" },
+    { id: "overview", label: "Overview" },
     { id: "experience", label: "Experience" },
     { id: "education", label: "Education" },
     { id: "skills", label: "Skills" },
@@ -273,7 +273,7 @@ const DesignerProfile = () => {
   ];
 
   return (
-    <div className=" border-gray-100  rounded-sm  mt-4  p-6">
+    <div className=" border-gray-100  rounded-sm  my-10">
       {/* Tabs */}
       <div className="flex justify-between items-start-end justify-items-start border-b  border-gray-400 pb-1  mb-2">
         {tabs.map((tab) => (
@@ -293,11 +293,11 @@ const DesignerProfile = () => {
 
       {/* Content */}
       <div>
-        {/* Overview 
+
         {activeTab === "overview" && (
           
           <ProfileAbout />
-        )} */}
+        )}
 
         {/* Experience */}
         {activeTab === "experience" && (

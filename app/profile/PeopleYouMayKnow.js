@@ -213,10 +213,10 @@ function ProfileAvatar({ name, image }) {
 
 export default function PeopleYouMayKnow() {
   return (
-    <div className="p-3 custom-shadow border border-gray-200 rounded-sm font-[inter] bg-white">
+    <div className="p-5 border rounded-[30px]  border-gray-200 pr-2 ">
       {/* Header */}
       <div className="flex justify-between my-2">
-        <h2 className="text-gray-900 font-semibold text-lg">Profile Analytics</h2>
+        <h2 className="text-white font-semibold text-lg">Profile Analytics</h2>
         <Link
           href="/#"
           className="text-blue-700 font-medium hover:underline transition-underline duration-75"
@@ -233,12 +233,12 @@ export default function PeopleYouMayKnow() {
               <ProfileAvatar name={person.name} image={person.image} />
 
               <div>
-                <h4 className="font-semibold">{person.name}</h4>
-                <p className="text-sm text-gray-500">{person.role}</p>
-                <p className="text-xs text-gray-400">{person.type}</p>
+                <h4 className="font-semibold text-white">{person.name}</h4>
+                <p className="text-sm text-gray-100">{person.role}</p>
+                {/* <p className="text-xs text-gray-300">{person.type}</p> */}
 
                 {/* Mutual Connections */}
-                <div className="flex items-center gap-2 mt-1">
+                <div className="flex items-center gap-2 mt-2">
                   <div className="flex -space-x-2">
                     {person.mutualConnections.slice(0, 3).map((conn, i) => (
                       <Image
@@ -251,12 +251,12 @@ export default function PeopleYouMayKnow() {
                       />
                     ))}
                     {person.mutualConnections.length > 3 && (
-                      <div className="w-6 h-6 flex items-center justify-center bg-gray-300 rounded-full text-xs text-gray-700 border-2 border-white">
+                      <div className="w-6 h-6 flex items-center justify-center bg-gray-300 rounded-full text-xs text-gray-300 border-2 border-white">
                         +{person.mutualConnections.length - 3}
                       </div>
                     )}
                   </div>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-gray-200">
                     {person.mutualConnections.length} mutual connections
                   </p>
                 </div>
@@ -266,7 +266,7 @@ export default function PeopleYouMayKnow() {
           <Button
                 icon={FaUserPlus}
                 showIcon
-                buttonclass="bg-blue-600 !w-full !justify-center  mt-2 text-white hover:bg-blue-700"
+                buttonclass=" !w-full !justify-center  mt-4 text-white  "
               >
                 Connect
               </Button>

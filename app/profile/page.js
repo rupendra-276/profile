@@ -157,7 +157,7 @@ export default function Profille() {
   const [user, setUser] = useState({
     name: "Rupendra Vishwakarma",
     cover: "/profiledefaultcover.jpg",
-    avatar: "/AboutDumImg.jpeg",
+    avatar: "/profiledefault.png",
     headline:
       "Software Engineer | MERN Stack | React, Next.js, Node.js | Python & ML (Learning) | Aspiring AI Engineer",
     location: "Rewa, India",
@@ -181,21 +181,23 @@ export default function Profille() {
   };
 
   return (
-    <div className="bg-[#020718] h-screen overflow-hidden">
-      <div className="flex items-start w-full gap-8 relative h-full">
+    <div className="bg-[#040711] h-screen overflow-hidden ">
+      <div className="flex items-start  w-full gap-8 relative h-full">
         
-        {/* ===== Left Sidebar (Fixed Width) ===== */}
-        <div  className={`w-[18%] overflow-y-auto transition-transform  duration-300 border-r border-gray-200 text-white h-full z-20
+        {/* =====  Left Sidebar (Fixed Width) ===== */}
+        <div  className={`w-[18%] overflow-y-auto transition-transform  duration-300 border-r border-gray-200/50 text-[var(--white)] h-full z-20
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-[55%]"}`}>
         <div >
-          <div className="p-4 mt-7 space-y-5 text-end">
+          <div className="px-5 py-6 mt-7 space-y-5 text-end">
               {menuItems.map((item, index) => (
             <Link
               key={index}
               href={item.link}
-              className={`flex ${isSidebarOpen ? " items-center justify-start" : " justify-end items-end"}  me-6 gap-3 text-white hover:text-blue-600 transition `}
+              className={`flex ${isSidebarOpen ? " items-center justify-start" : " justify-end items-end"} text-sm  me-6 gap-3 text-white hover:text-blue-600 transition `}
             >
+             <span className="text-sm">
               {item.icon} 
+              </span> 
               {isSidebarOpen && <span>{item.name}</span>}
             </Link>
           ))}
@@ -218,30 +220,40 @@ export default function Profille() {
           <GoSidebarCollapse className="w-8 h-8 text-white" />
         </button>
         {/* ===== Main Content ===== */}
+
+        
         <div
           className={`transition-all duration-300 px-4 mt-5 relative h-full 
             ${isSidebarOpen ? "w-[60%] translate-x-0" : "w-[75%] -translate-x-[100px]"} 
           `}
         >
-          <div className="h-full overflow-y-auto custom-scroll pr-2">
+          <div className="h-full overflow-y-auto custom-scroll pr-2 ">
             <ProfileHeader user={dummyUser} onUpdate={handleUpdate} />
-             <ProfileAbout about={user.about} />
+             {/* <ProfileAbout about={user.about} /> */}
             <DesignerProfile /> 
             {/* <hr className="border-gray-400 my-5" /> */}
           </div>
         </div>
+
         {/* ===== Right Sidebar ===== */}
-        <div
-          className={`transition-all duration-300 hidden md:block my-10  h-32 md:h-56
-            ${isSidebarOpen ? "w-[20%] -translate-x-5" : "w-[28%] -translate-x-25"}
-          `}
-        > 
-          <div className="h-full  border rounded-2xl  border-gray-200 pr-2">
-            {/* <ProfileAnalytics />
-            <PeopleYouMayKnow />
-            <JoinCommunities /> */}
-          </div>
-        </div>
+       
+<div
+  className={`transition-all duration-300 hidden md:block mt-5
+    ${isSidebarOpen ? "w-[20%] -translate-x-5" : "w-[28%] -translate-x-25"}
+    h-screen overflow-y-auto custom-scroll   
+  `}
+>
+  <div className="space-y-3 px-2  ">
+    <ProfileAnalytics />
+    <PeopleYouMayKnow />
+    <div className="mb-10">
+    <JoinCommunities />
+
+    </div>
+  </div>
+</div>
+
+
       </div>
     </div>
   );

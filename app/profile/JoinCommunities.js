@@ -25,8 +25,8 @@ const communities = [
 
 export default function JoinCommunities() {
   return (
-    <div className="p-3 my-5 border border-gray-400 rounded-sm font-[inter] bg-white">
-      <h2 className="text-gray-900 font-semibold text-lg mb-3 font-[inter]">
+    <div className=" p-5 border rounded-[30px]  border-gray-200 pr-2 font-[inter]">
+      <h2 className="text-white font-semibold text-lg mb-3 font-[inter]">
         Join Communities
       </h2>
 
@@ -45,7 +45,7 @@ function CommunityCard({ com }) {
   return (
     <Link
       href={com.link}
-      className="flex items-center gap-3 border border-gray-200 rounded-lg px-3 py-2 hover:bg-gray-50 transition"
+      className="flex items-center gap-3 border mb-2 border-gray-200 rounded-lg px-3 py-2 hover:bg-[#030611] transition"
     >
       {/* Logo / Fallback */}
       {com.logo && !imgError ? (
@@ -65,8 +65,8 @@ function CommunityCard({ com }) {
 
       {/* Text */}
       <div>
-        <p className="font-medium">{com.name}</p>
-        <p className="text-sm text-gray-600">{com.members} members</p>
+        <h3 className="font-medium  text-white">{com.name}</h3>
+        <p className="text-sm text-gray-300">{com.members} members</p>
       </div>
     </Link>
   );

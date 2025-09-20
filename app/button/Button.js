@@ -35,7 +35,7 @@ export function NavLinkButton({
   return (
     <Link
       href={href}
-      className={`group relative text-gray-700 font-medium px-3 lg:px-4 py-1.5 lg:py-2 
+      className={`group relative text-white font-medium px-3 lg:px-4 py-1.5 lg:py-2 
                   rounded-full transition-all duration-300 hover:shadow-sm  hover:cursor-pointer
                   text-sm lg:text-base  ${linkclassname}`}
     >

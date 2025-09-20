@@ -18,7 +18,7 @@ export default function TextAreaField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`w-full px-3 py-2 mt-3 text-[#fff] border border-gray-300 rounded-xs resize-none 
+        className={`w-full px-3 py-2 mt-3 text-[#fff] border border-gray-200 rounded-xl resize-none 
           ${error ? "border-red-500" : "borderblack"} 
           focus:border focus:border-blue-300 focus:outline`}
         rows={rows}

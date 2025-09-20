@@ -1,4 +1,3 @@
-
 // "use client";
 // import React, { useState } from "react";
 // import { FaRegEdit } from "react-icons/fa";
@@ -98,7 +97,6 @@
 //         </p>
 //       )}
 
-     
 //       {/* ✅ Modal */}
 //       {isModalOpen && (
 //         <AnimatedWrapper className="fixed  inset-0 flex items-center justify-center bg-[#0b0b0b71] z-50">
@@ -126,7 +124,6 @@
 //     rows={6}
 //   />
 
- 
 //   {/* Buttons */}
 //   <div className="flex gap-3 justify-end ">
 //     <Button
@@ -151,8 +148,6 @@
 //     </div>
 //   );
 // }
-
-
 
 "use client";
 import React, { useState } from "react";
@@ -222,10 +217,12 @@ export default function AboutSection() {
   };
 
   return (
-    <div className="px-4 mt-4 rounded-xs transition-all">
+    <div className=" mt-4 rounded-xs transition-all">
       {/* Header */}
       <div className="flex justify-between items-start">
-        <h3 className="text-2xl font-sens font-medium font-[jost] text-[var(--gray-100)]">About</h3>
+        <h3 className="text-2xl font-sens font-medium font-[jost] text-[var(--gray-100)] mb-3">
+          About
+        </h3>
         <button
           onClick={() => setIsModalOpen(true)}
           className="border border-white rounded-2xl text-white  px-3 text-sm py-1 flex items-center gap-1 "
@@ -243,7 +240,7 @@ export default function AboutSection() {
       </div>
 
       {/* About Text */}
-      {about ? (
+      {/* {about ? (
         <div className="mt-4 text-[var(--white)] text-sm whitespace-pre-line">
           {about}
         </div>
@@ -251,82 +248,76 @@ export default function AboutSection() {
         <p className="mt-4 text-[var(--white)]">
           Add a short introduction about yourself, your skills, and career goals.
         </p>
-      )}
+      )} */}
 
-     
+      <p className="text-sm text-white whitespace-pre-line">
+        Passionate Full Stack Developer with 3+ years of experience building
+        scalable web applications. Specialized in React.js, Node.js, and modern
+        web technologies. </p>
+        <p className="text-sm text-white mt-3">
+           I love creating user-centric solutions that solve
+        real-world problems. Currently seeking opportunities to contribute to
+        innovative projects in a dynamic tech environment.
+          </p> 
+          <p className="text-sm text-white mt-3">When I'm not coding,
+        you'll find me exploring new technologies, contributing to open source
+        projects, or mentoring aspiring developers in my community</p>
+      
+
       {/* ✅ Modal */}
       {isModalOpen && (
         <AnimatedWrapper className="fixed  inset-0 flex  items-center justify-center bg-[#0b0b0beb] z-50">
-          <div className=" m-3 bg-[#01030b] border border-gray-100/50 rounded-sm w-full max-w-2xl">
+          <div className=" m-3 bg-[#01030b] border border-gray-200 rounded-xl w-full max-w-2xl">
             {/* Header */}
             <div className="relative border-b border-gray-300 py-3 px-6">
-              <h3 className="text-lg font-medium text-[var(--white)]" >Edit About & Skills</h3>
+              <h3 className="text-lg font-medium text-[var(--white)]">
+                Edit About & Skills
+              </h3>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-3 right-3 p-2 text-gray-500 hover:cursor-pointer"
+                className="absolute top-3 right-3 p-2 text-white hover:cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             <form onSubmit={handleSubmit} className=" p-4">
-              <h3 className="my-2 text-xl text-[var(--white)] font-semibold font-[inter]">A skill, habit, or personality trait that makes you unique.</h3>
-  {/* About */}
-      <TextAreaField
-        label="About You"
-        placeholder="Write about your experience, skills, and aspirations..."
-        value={about}
-        onChange={(e) => setAbout(e.target.value)}
-        error={errors.about}
-        rows={6}
-      />
+              <h3 className="my-2 text-xl text-[var(--white)] font-semibold font-[inter]">
+                A skill, habit, or personality trait that makes you unique.
+              </h3>
+              {/* About */}
+              <TextAreaField
+                label="About You"
+                placeholder="Write about your experience, skills, and aspirations..."
+                value={about}
+                onChange={(e) => setAbout(e.target.value)}
+                error={errors.about}
+                rows={6}
+              />
 
- 
-  {/* Buttons */}
-  <div className="flex gap-3 justify-end ">
-    <Button
-      type="button"
-      onClick={() => setIsModalOpen(false)}
-      buttonclass="bg-gray-300 text-black hover:bg-gray-400"
-    >
-      Cancel
-    </Button>
-    <Button
-      type="submit"
-      buttonclass="!bg-blue-700 text-white hover:bg-blue-800"
-    >
-      Save
-    </Button>
-  </div>
-</form>
-
+              {/* Buttons */}
+              <div className="flex gap-3 justify-end ">
+                <Button
+                  type="button"
+                  onClick={() => setIsModalOpen(false)}
+                  buttonclass="bg-gray-300 text-black hover:bg-gray-400"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  buttonclass="!bg-blue-700 text-white hover:bg-blue-800"
+                >
+                  Save
+                </Button>
+              </div>
+            </form>
           </div>
         </AnimatedWrapper>
       )}
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // "use client";
 // import React, { useState } from "react";
@@ -382,7 +373,6 @@ export default function AboutSection() {
 //     setNewSkill("");
 //   };
 
-
 //   return (
 //     <div className="p-6 mb-4 border border-gray-400 rounded-sm transition-all">
 //       {/* Header */}
@@ -415,7 +405,6 @@ export default function AboutSection() {
 //         </p>
 //       )}
 
-   
 //       {/* ✅ Modal */}
 //       {isModalOpen && (
 //         <AnimatedWrapper className="fixed  inset-0 flex items-center justify-center bg-[#0b0b0b71] z-50">
@@ -442,7 +431,6 @@ export default function AboutSection() {
 //     error={errors.about}
 //     rows={6}
 //   />
-
 
 //   {/* Buttons */}
 //   <div className="flex gap-3 justify-end ">
